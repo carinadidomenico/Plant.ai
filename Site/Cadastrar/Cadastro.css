@@ -1,5 +1,6 @@
 body{
-    background-image: url("Fundo.png");;
+    background-image: url("Fundo.png");
+    min-width: 550px;
 }
 
 img{
@@ -58,9 +59,9 @@ div button{
     background-color: rgb(0, 63, 0);
     color: greenyellow;
     height: 6vh;
-    width: 8vw;
+    width: 12vw;
     font-size: 20px;
-    min-width: 110px;
+    min-width: 130px;
     min-height: 30px;
 }
 
