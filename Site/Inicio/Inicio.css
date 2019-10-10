@@ -1,10 +1,6 @@
-html{
-    scroll-behavior: smooth;
- }
+html{scroll-behavior: smooth;}
 
-body{
-    min-width: 550px;
-}
+body{min-width: 550px;}
 
 .topo{
     background-image: url("Fundo_inicio.png");
@@ -60,16 +56,16 @@ a{
 }
 
 .frase {
-    margin-top: 40vh;
+    margin-top: 20vh;
     padding: 3vh;
-    font-size: 5vh;
+    font-size: 2.8vw;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.3);
     color: greenyellow;
 }
 
 button{
-    margin-top: 12vh;
+    margin-top: 6vh;
     border: 100ch;
     border-radius: 5px;
     border-color: rgba(0, 0, 255, 0);
@@ -81,10 +77,7 @@ button{
     min-width: 125px;
 }
 
-button:hover{
-    /* transition: all 2s; */
-    font-size: 23px;
-}
+button:hover{font-size: 23px;}
 
 .escrito{
     float: left;
@@ -192,9 +185,7 @@ fieldset b{
     display: contents;
 }
 
-b{
-    font-size: 30px;
-}
+b{font-size: 30px;}
 
 input{
     vertical-align: middle !important;
@@ -301,12 +292,3 @@ min-height: 17px;
         margin-right: 30px;
     }
 }
-
-.scroll-aparecer{
-    width: 50px;
-    float: left;
-    height: 0;
-    background-color: #000;
-    
-    position: fixed; top: 0; left: 0; z-index: 999;
- }
