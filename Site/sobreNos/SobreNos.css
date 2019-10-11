@@ -9,11 +9,9 @@ img{
     width: 8vw;
     margin-bottom: 2%; 
     flex-basis: 5%;
-    /* max-width: 40px; */
 }
 
 div{
-    /* flex-basis: 100%; */
     text-align: center;
     border: 1px solid black;
     margin-left: 1%;
@@ -32,8 +30,7 @@ div p{
 }
 
 li{
-    list-style-type:none;
+    list-style-type:none;       /* tirar a bolinha do list */
     font-size: 30px;
     margin-bottom: 25px;
-    /* margin-top: -15px;  */
 }

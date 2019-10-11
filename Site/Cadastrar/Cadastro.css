@@ -22,7 +22,7 @@ div h1{
     font-weight: bold;
 }
 
-.grande{
+.grande{        /* imputs que devem ser grandes */
 margin-bottom: 2vw;
 width: 90%;
 border-radius: 7px;
@@ -31,7 +31,7 @@ border: 1px solid black;
 min-height: 17px;
 }
 
-.pequeno{
+.pequeno{       /* inputs que devem ser pequenos */
     margin-bottom: 2vw;
     width: 30%;
     border-radius: 7px;
@@ -40,7 +40,7 @@ min-height: 17px;
     min-height: 17px;
 }
 
-span{
+span{       /* escrita do chechBox */
     float: left;
     font-weight: bold;
 }
