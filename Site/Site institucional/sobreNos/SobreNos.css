@@ -2,6 +2,7 @@ body{
     display: flex;
     background-image: url("Fundo.png");
     min-width: 550px;
+    font-family: 'Roboto', sans-serif;
     flex-wrap: wrap;
 }
 
