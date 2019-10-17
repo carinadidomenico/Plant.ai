@@ -1,17 +1,8 @@
                         /* parte do corpo do site e suas funções básica */
 
-html{
-    scroll-behavior: smooth;
-    font-family: 'Roboto', sans-serif;
-}
+html{scroll-behavior: smooth;}
 
-* {
-    font-family: 'Roboto', sans-serif;
-}
-
-body{
-    min-width: 550px;
-}
+body{min-width: 700px;}
 
 .invisivel{
     display: none;
@@ -27,11 +18,12 @@ body{
     
 }
 
-              /* foramto das divs que vem depois da pagina principal */
+                        /* foramto das divs que vem depois da pagina principal */
 
 .verde{
     background-color: #24332C;
     height: 680px;
+    text-align: center;
 }
 
 .branco{
@@ -165,7 +157,7 @@ fieldset b{
 .plano1{
     display: flex;
     float: left;
-    height: 75%;
+    height: 65%;
     width: 42%;
     background-color: #A2C16A;
     text-align: center;
@@ -182,7 +174,7 @@ fieldset b{
 .plano2{
     display: flex;
     float: right;
-    height: 75%;
+    height: 65%;
     width: 42%;
     background-color: #A2C16A;
     margin-right: 70px;
@@ -193,6 +185,13 @@ fieldset b{
 .plano2 img{
     margin-left: 4%;
     width: 92%;
+}
+
+.financa{
+    color: black;
+    background-color: #A2C16A;
+    font-weight: bold;
+    width: 250px;
 }
 
                                 /* parte de contato do site (pag.05) */
