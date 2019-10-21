@@ -2,7 +2,10 @@
 
 html{scroll-behavior: smooth;}
 
-body{min-width: 700px;}
+body{min-width: 700px;
+    font-family: 'Varela', sans-serif;
+ 
+}
 
 .invisivel{
     display: none;

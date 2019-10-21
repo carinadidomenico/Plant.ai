@@ -3,6 +3,7 @@ body{
     background-image: url("Fundo.png");
     min-width: 550px;
     flex-wrap: wrap;
+    font-family: 'Varela', sans-serif;
 }
 
 img{

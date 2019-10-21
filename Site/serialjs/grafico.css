@@ -1,6 +1,8 @@
 body{
     background-image: url("Fundo.png");
     min-width: 550px;
+    font-family: 'Varela', sans-serif;
+
 }
 
 img{
