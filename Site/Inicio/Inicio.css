@@ -214,7 +214,7 @@ fieldset b{
 
 .contato img{
     cursor: pointer;
-    width: 8%;
+    width: 10%;
     height: 10%;
     margin-top: -20px;
     margin-left: 5%;
@@ -281,6 +281,10 @@ min-height: 17px;
     margin: 0%;
 }
 
+#comTomTicketChatWidget, .tomticketChat-status-chat {
+    background-color: #24332C !important;
+}
+
                     /* formato para mudar os comandos apenas em certas ocasioes */
 
 @media only screen and (max-width: 900px) {     /* muda apenas quando width chegar aos 900px */
@@ -314,7 +318,7 @@ min-height: 17px;
     }
     .contato img{
         margin-top: -15px;
-        width: 6%;
+        width: 8%;
         height: 8%;
     }
     input{
