@@ -47,7 +47,7 @@ function iniciar_escuta() {
         // o baudRate deve ser igual ao valor em
         // Serial.begin(xxx) do Arduino (ex: 9600 ou 115200)
         var arduino = new porta_serial(arduinoCom, {
-            baudRate: 115200
+            baudRate: 9600
         });
 
         var parser = new leitura_recebida();
@@ -62,7 +62,7 @@ function iniciar_escuta() {
             try {
                 // O Arduino deve enviar a temperatura e umidade de uma vez,
                 // separadas por ":" (temperatura : umidade)
-                var leitura = dados.split(':');
+                var leitura = dados.split(';');
                 registrar_leitura(Number(leitura[0]), Number(leitura[1]));
             } catch (e) {
                 throw new Error(`Erro ao tratar os dados recebidos do Arduino: ${e}`);
