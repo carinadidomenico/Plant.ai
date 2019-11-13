@@ -1,5 +1,3 @@
-select * from Cliente;
-
 create table Cliente 
 (
 	idCliente int identity(1,1) primary key,
@@ -36,8 +34,8 @@ create table Produto
 	idProduto int identity(101,1) primary key,
 	tipoDeVaso int,
     check(tipoDeVaso = 1 or tipoDeVaso = 2 or tipoDeVaso = 3),
-	regUmidade int,
-	regTemperatura int,
+	regUmidade DECIMAL (4,2),
+	regTemperatura DECIMAL (4,2),
 	regTemporal datetime,
     fkCliente int,
     fkPlanta int
