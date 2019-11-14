@@ -21,14 +21,14 @@ router.post('/autenticar', function(req, res, next) {
 		console.log(`Encontrados: ${resultado.length}`);
 
 		if (resultado.length == 1) {
-			sessoes.push(resultado[0].dataValues.login);
+			sessoes.push(resultado[0].dataValues.email);
 			console.log('sessoes: ',sessoes);
 			res.json(resultado[0]);
 		} else if (resultado.length == 0) {
 			res.status(403).send('Login e/ou senha inválido(s)');
 		} else {
 			res.status(403).send('Mais de um usuário com o mesmo login e senha!');
-		}
+		}	
 
 	}).catch(erro => {
 		console.error(erro);
