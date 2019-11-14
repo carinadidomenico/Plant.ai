@@ -1,24 +1,32 @@
+
 body{
-    display: flex;
-    background-image: url("Fundo.png");
+    background-image: url(planta2.jpg);
+    background-size: cover;
     min-width: 550px;
-    flex-wrap: wrap;
-    font-family: 'Varela', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
+section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
 img{
-    width: 8vw;
-    margin-bottom: 2%; 
+    width: 9vw;
+    margin-bottom: 2%;
     flex-basis: 5%;
+    height: 11vw;
 }
 
 div{
+    color: white;
     text-align: center;
-    border: 1px solid black;
     margin-left: 1%;
     margin-right: 1%;
     width: 45%;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.2);
     margin-bottom: 3%;
     font-size: 20px;
     line-height: 25px;
@@ -30,8 +38,8 @@ div p{
     margin-top: 20px;
 }
 
-li{
-    list-style-type:none;       /* tirar a bolinha do list */
+span{
     font-size: 30px;
+    line-height: 50px;
     margin-bottom: 25px;
 }
