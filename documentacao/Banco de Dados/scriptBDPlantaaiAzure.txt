@@ -11,7 +11,7 @@ create table Cliente
     cidade varchar (50),
     bairro varchar (50),
     rua varchar (50),
-    número int,
+    numeroRua int,
 );
 
 create table Planta
