@@ -114,12 +114,12 @@
                     // que gerou na consulta ao banco de dados
                     dadosTemperatura = google.visualization.arrayToDataTable([
                         ['Label', 'Value'],
-                        ['Temperatura', resposta.temperatura]
+                        ['Temperatura', resposta.regTemperatura]
                     ]);
 
                     dadosUmidade = google.visualization.arrayToDataTable([
                         ['Label', 'Value'],
-                        ['Umidade', resposta.umidade]
+                        ['Umidade', resposta.regUmidade]
                     ]);
 
                     var dados = {
@@ -127,7 +127,7 @@
                         umidade: dadosUmidade
                     }
                     
-                    alertar(resposta.temperatura, resposta.umidade);
+                    alertar(resposta.regTemperatura, resposta.regUmidade);
                     plotarGrafico(dados);
                 });
             } else {

@@ -34,12 +34,18 @@ create table Produto
 	idProduto int identity(101,1) primary key,
 	tipoDeVaso int,
     check(tipoDeVaso = 1 or tipoDeVaso = 2 or tipoDeVaso = 3),
-	regUmidade DECIMAL (4,2),
-	regTemperatura DECIMAL (4,2),
-	regTemporal datetime,
     fkCliente int,
     fkPlanta int
 
+);
+
+create table Registro 
+(
+	fkProduto int,
+	regUmidade DECIMAL (4,2),
+	regTemperatura DECIMAL (4,2),
+	regTemporal datetime,
+	foreign key (fkProduto) references Produto (idProduto)
 );
 
 alter table Produto add foreign key (fkCliente) references Cliente(idCliente);
@@ -63,10 +69,32 @@ e bem drenados.Faça  a poda após o período de frutificação e no caso de colheita
 das raízes. Coloque-a um local com boa luminosidade, mas sem excesso. Pouca luz deixa as folhas com cor verde-garrafa.');
 
 insert into Produto values
-(1, 40, 22, '2019-10-21 12:00:00',1, 201),
-(2, 67, 36, '2019-10-21 12:00:00',2, 202),
-(3, 88, 19, '2019-10-21 12:00:00',3, 203);
+
+(1, 1, 201),
+
+(2, 2, 202),
+
+(3, 3, 203);
+
+
+
+insert into Registro values
+
+(101,40, 22, '2019-10-21 12:00:00'),
+
+(102,67, 36, '2019-10-21 12:00:00'),
+
+(103,88, 19, '2019-10-21 12:00:00'),
+(102,40, 22, '2019-10-21 12:10:00'),
+
+(102,67, 36, '2019-10-21 12:20:00'),
+
+(102,88, 19, '2019-10-21 12:30:00');
 
 select * from Cliente;
 select * from Produto;
 select * from Planta;
+select * from Registro;
+
+
+select * from Produto,Registro where idProduto = fkProduto and idProduto = 102 order by regTemporal desc;
