@@ -1,5 +1,6 @@
 body{
-    background-image: url("Fundo.png");
+    background-image: url("../imagens site/planta.jpg");
+    background-size: cover;
     min-width: 550px;
     font-family: 'Varela', sans-serif;
 }

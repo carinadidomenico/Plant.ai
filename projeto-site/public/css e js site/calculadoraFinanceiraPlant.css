@@ -1,7 +1,9 @@
 body{
-    background-image: url("Fundo.png");
+    background-image: url("../imagens\ site/planta2.jpg");
+    background-size: cover;
     min-width: 550px;
     font-family: 'Roboto', sans-serif;
+    /* color: white; */
 }
 .img{
     width: 10vw;
@@ -11,7 +13,7 @@ body{
     font-weight: bold;
 }
 .container {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.4);
     margin-left: 25%;
     margin-right: 25%;
     padding-top: 0.3%;
