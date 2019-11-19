@@ -1,0 +1,97 @@
+/* BASE */
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+}
+
+main {
+    width: 100vw;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 100vh;
+    width: 16vw;
+    background-color:#89e5b7;
+    box-shadow: 1px 0px 10px #155434;
+}
+
+.navbar-links {
+    margin: auto;
+    display: flex;
+    width: 8rem;
+    height: 20rem;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #155434;
+}
+
+.navbar-links a:hover {
+    color: #0a8346;
+    text-decoration: underline solid #0a8346;
+    transition: 0.5s linear;
+}
+
+.navbar-img {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.navbar-img img {
+    width: 10rem;
+}
+
+/* INÍCIO FAQ */
+
+.faq {
+    width: 50rem;
+    margin: auto;
+}
+
+.faq-pergunta{
+    display: flex;
+    justify-content: space-between;
+    background-color: #89e5b7;
+    padding: .5rem 1rem;
+}
+
+.faq-resposta {
+    background-color: #89e5b7;
+    height: 0;
+    padding: .5rem 1rem;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+/* SCROLL */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
