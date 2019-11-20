@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Varela&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css e js site/Login.css">
     <script language="javascript" SRC="./css e js site/Login.js"></script>
@@ -15,19 +16,20 @@
    <img src="./imagens site/logo.png" alt="Logo" style="margin-left: 37%">
     <div class="login">
         <h1>Login</h1><br>
-        <p>Email ou Usuario</p> <br>
-        <input type="text" placeholder="Email ou  Usuario"> <br> <br>
+        <form id="form_login" method="post">
+            <p>Email</p> <br>
+            <input type="text" placeholder="Email" name="email"> <br> <br>
         
-        <P>Senha</P><br>
-        <input type="password" placeholder=" Senha"><br>
+            <P>Senha</P><br>
+            <input type="password" placeholder=" Senha" name="senha"><br>
+        </form>
         <div class="a">
-                <a href="./Cadastro.html">Não sou cadastrado</a> 
-                <a href="./Cadastro.html">Esqueceu a senha?</a>
+            <a href="./Cadastro.html">Não sou cadastrado</a> 
+            <a href="./Cadastro.html">Esqueceu a senha?</a>
         </div>
        
         <br><br>
-        <button class="btn">Login</button>
+        <button class="btn" onclick="entrar()">Login</button>
     </div>
 </body>
 </html>
-<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
