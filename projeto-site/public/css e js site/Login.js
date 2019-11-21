@@ -8,12 +8,13 @@ function entrar() {
         if (resposta.ok) {
 
             resposta.json().then(json => {
-                
+
 
                 sessionStorage.login_usuario_meuapp = json.email;
-                sessionStorage.nome_usuario_meuapp = json.nome;
+                sessionStorage.nome_usuario_meuapp = json.nomeCliente;
                 sessionStorage.idCliente_usuario_meuapp = json.idCliente;
-                window.location.href = 'calculadoraFinanceiraPlant.html';
+                sessionStorage.idProduto_usuario_meuapp = json.idProduto;
+                window.location.href = 'SobreNos.html';
             });
 
         } else {

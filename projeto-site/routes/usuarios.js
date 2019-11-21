@@ -4,6 +4,7 @@ var sequelize = require('../models').sequelize;
 var Usuario = require('../models').Usuario;
 
 let sessoes = [];
+let produtos = [];
 
 /* Recuperar usuário por email e senha */
 router.post('/autenticar', function(req, res, next) {
@@ -20,15 +21,17 @@ router.post('/autenticar', function(req, res, next) {
 	}).then(resultado => {
 		console.log(`Encontrados: ${resultado.length}`);
 
-		if (resultado.length == 1) {
+		if (resultado.length > 1) {
 			sessoes.push(resultado[0].dataValues.email);
 			console.log('sessoes: ',sessoes);
 			res.json(resultado[0]);
 		} else if (resultado.length == 0) {
 			res.status(403).send('email e/ou senha inválido(s)');
-		} else {
-			res.status(403).send('Mais de um usuário com o mesmo email e senha!');
-		}	
+		} 
+		
+		// else {
+		// 	res.status(403).send('Mais de um usuário com o mesmo email e senha!');
+		// }	
 
 	}).catch(erro => {
 		console.error(erro);
@@ -139,5 +142,16 @@ router.get('/', function(req, res, next) {
 		res.status(500).send(erro.message);
   	});
 });
+
+
+// pegando os produtos do cliente ao entrar
+router.post('/produtos', function(req, res,next){
+	console.log('pegando produtos do cliente');
+
+	var user = 1;
+
+	let instrucaoSql = `select * from produto where fkCliente = ${user};`
+	console.log(instrucaoSql);
+})
 
 module.exports = router;
