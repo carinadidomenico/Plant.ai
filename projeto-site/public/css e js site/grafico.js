@@ -23,3 +23,29 @@ slide.addEventListener('click', function () {
 //         }  
 //     })
 // }
+
+function pegarProdutos(){
+    var formulario = new URLSearchParams(new FormData(form_produto));
+    fetch("/usuarios/produtos",{
+        method: "POST",
+        body: formulario
+    }).then(resposta =>{
+    
+        if (resposta.ok){
+    
+            resposta.json().then(json =>{
+                sessionStorage.idProduto_usuario_meuapp = json.idProduto;
+                
+            })
+        }
+        else{
+            alert(`erro ao pegar produto`);
+            // window.location.href = 'Login.html'
+        }
+    
+    })}
+    
+    window.onload = function(){
+        numero.value = sessionStorage.idCliente_usuario_meuapp;
+        
+    }

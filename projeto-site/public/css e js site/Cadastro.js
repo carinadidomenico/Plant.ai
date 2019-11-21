@@ -22,11 +22,9 @@ function cadastrar() {
         
         else {
 
-            alert(response.text);
-
             console.log('Erro de cadastro!');
             response.text().then(function (resposta) {
-                div_erro.innerHTML = resposta;
+                alert(resposta);
             });
         }
     });
