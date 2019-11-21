@@ -21,17 +21,15 @@ router.post('/autenticar', function(req, res, next) {
 	}).then(resultado => {
 		console.log(`Encontrados: ${resultado.length}`);
 
-		if (resultado.length > 1) {
+		if (resultado.length == 1) {
 			sessoes.push(resultado[0].dataValues.email);
 			console.log('sessoes: ',sessoes);
 			res.json(resultado[0]);
 		} else if (resultado.length == 0) {
-			res.status(403).send('email e/ou senha inválido(s)');
-		} 
-		
-		// else {
-		// 	res.status(403).send('Mais de um usuário com o mesmo email e senha!');
-		// }	
+			res.status(403).send('Login e/ou senha inválido(s)');
+		} else {
+			res.status(403).send('Mais de um usuário com o mesmo login e senha!');
+		}
 
 	}).catch(erro => {
 		console.error(erro);
@@ -43,51 +41,60 @@ router.post('/autenticar', function(req, res, next) {
 router.post('/Cadastrar', function(req, res, next) {
 	console.log('Criando um usuário');
 
-	var nome = req.body.nome;
-	var CPF = req.body.CPF;
-	var email = req.body.email;
-	var senha = req.body.senha;
-	var conta = req.body.conta;
-	var estado = req.body.estado;
-	var cidade = req.body.cidade;
-	var bairro = req.body.bairro;
-	var rua = req.body.rua;
-	var numeroRua = req.body.numero_Rua;
+	// var nome = req.body.nome;
+	// var CPF = req.body.CPF;
+	// var email = req.body.email;
+	// var senha = req.body.senha;
+	// var conta = req.body.conta;
+	// var estado = req.body.estado;
+	// var cidade = req.body.cidade;
+	// var bairro = req.body.bairro;
+	// var rua = req.body.rua;
+	// var numeroRua = req.body.numero_Rua;
 
-	let instrucaoSql = `insert into Cliente values (${nome},${CPF},${email},${senha},${conta},${estado},${cidade},${bairro},${rua},${numeroRua});`;
-	console.log(instrucaoSql);
+	// let instrucaoSql = `insert into Cliente values (${nome},${CPF},${email},${senha},${conta},${estado},
+	// ${cidade},${bairro},${rua},${numeroRua});`;
+	// console.log(instrucaoSql);
 
-	sequelize.query(instrucaoSql, {
-		model: Usuario
-	}).then(resultado => {
-		console.log(`Encontrados: ${resultado.length}`);
-
-		if (resultado.length == 1) {
-			sessoes.push(resultado[0].dataValues.email);
-			console.log('sessoes: ',sessoes);
-			res.json(resultado[0]);
-		} else if (resultado.length == 0) {
-			res.status(403).send('email e/ou senha inválido(s)');
-		} else {
-			res.status(403).send('Mais de um usuário com o mesmo email e senha!');
-		}	
-
-	}).catch(erro => {
-		console.error(erro);
-		res.status(500).send(erro.message);
-  	});
-	
-	// Usuario.create({
-	// 	nome : req.body.nome,
-	// 	login : req.body.login,
-	// 	senha: req.body.senha
+	// sequelize.query(instrucaoSql, {
+	// 	model: Usuario
 	// }).then(resultado => {
-	// 	console.log(`Registro criado: ${resultado}`)
-    //     res.send(resultado);
-    // }).catch(erro => {
+	// 	console.log(`Encontrados: ${resultado.length}`);
+
+	// 	if (resultado.length == 1) {
+	// 		sessoes.push(resultado[0].dataValues.email);
+	// 		console.log('sessoes: ',sessoes);
+	// 		res.json(resultado[0]);
+	// 	} else if (resultado.length == 0) {
+	// 		res.status(403).send('email e/ou senha inválido(s)');
+	// 	} else {
+	// 		res.status(403).send('Mais de um usuário com o mesmo email e senha!');
+	// 	}	
+
+	// }).catch(erro => {
 	// 	console.error(erro);
 	// 	res.status(500).send(erro.message);
   	// });
+	
+	Usuario.create({
+		nomeCliente : req.body.nome,
+		CPF : req.body.CPF,
+		email : req.body.email,
+		senha : req.body.senha,
+		conta : req.body.conta,
+		estado : req.body.estado,
+		cidade : req.body.cidade,
+		bairro : req.body.bairro,
+		rua : req.body.rua,
+		numeroRua : req.body.numero_Rua,
+
+	}).then(resultado => {
+		console.log(`Registro criado: ${resultado}`)
+        res.send(resultado);
+    }).catch(erro => {
+		console.error(erro);
+		res.status(500).send(erro.message);
+  	});
 });
 
 
@@ -148,10 +155,30 @@ router.get('/', function(req, res, next) {
 router.post('/produtos', function(req, res,next){
 	console.log('pegando produtos do cliente');
 
-	var user = 1;
+	var user = req.body.produto;
 
 	let instrucaoSql = `select * from produto where fkCliente = ${user};`
 	console.log(instrucaoSql);
-})
+
+	sequelize.query(instrucaoSql, {
+		model: Usuario
+	}).then(resultado => {
+		console.log(`Encontrados: ${resultado.length}`);
+
+		if (resultado.length > 0) {
+			produtos.push(resultado[0]);
+			console.log('produto: ',produtos);
+			res.json(resultado[0]);
+		} else if (resultado.length == 0) {
+			res.status(403).send('Login e/ou senha inválido(s)');
+		} else {
+			res.status(403).send('Mais de um usuário com o mesmo login e senha!');
+		}
+
+	}).catch(erro => {
+		console.error(erro);
+		res.status(500).send(erro.message);
+  	});
+});
 
 module.exports = router;

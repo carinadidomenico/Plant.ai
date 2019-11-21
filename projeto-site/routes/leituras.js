@@ -74,5 +74,22 @@ router.get('/estatisticas', function (req, res, next) {
   
 });
 
+// estatísticas (max, min, média, mediana, quartis etc)
+router.get('/ProdutosCli', function (req, res, next) {
+	
+	console.log(`RPegando os Produtos do Cliente`);
+
+	const instrucaoSql = `select * from Produto where fkCliente = ${}`;
+
+	sequelize.query(instrucaoSql, { type: sequelize.QueryTypes.SELECT })
+		.then(resultado => {
+			res.json(resultado[0]);
+		}).catch(erro => {
+			console.error(erro);
+			res.status(500).send(erro.message);
+		});
+  
+});
+
 
 module.exports = router;

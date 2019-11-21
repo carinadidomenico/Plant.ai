@@ -18,11 +18,6 @@ module.exports = (sequelize, DataTypes) => {
 			type: DataTypes.STRING,
 			allowNull: false
 		},
-		dataNascimento: {
-			field:"dataNascimento",
-			type: DataTypes.STRING,
-			allowNull: false
-		},
 		CPF: {
 			field:"CPF",
 			type: DataTypes.STRING,
@@ -59,8 +54,8 @@ module.exports = (sequelize, DataTypes) => {
 			type: DataTypes.STRING,
 			allowNull: false
 		},
-		numeroCasa: {
-			field:"numeroCasa",
+		numeroRua: {
+			field:"numeroRua",
 			type: DataTypes.STRING,
 			allowNull: false
 		}
