@@ -55,15 +55,27 @@ main {
 /* INÍCIO PERFIL  */
 
 .perfil {
+    background-color: #89e5b7d8;
+    border-radius: 5px;
+    display: flex;
     margin-top: 4rem;
     width: 46rem;
-    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem auto;
+    padding: 2rem;
 }
 
-.perfil-nome {
+.perfil-dados {
+    width: 30rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.perfil-foto {
+    width: 5rem;
 }
 
 /* INÍCIO FAQ */
