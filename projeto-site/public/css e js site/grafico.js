@@ -2,15 +2,16 @@ var resposta = document.querySelector(".faq-resposta");
 var slide = document.querySelector(".slide");
 
 
-slide.addEventListener('click', function () {
-    if (resposta.style.height){
-        resposta.style.height = null;
-        resposta.style.padding = null;
-    } else {
-        resposta.style.height = "5rem";
-        resposta.style.padding = ".5rem 1rem";
-    }  
-})
+
+// slide.addEventListener('click', function () {
+//     if (resposta.style.height){
+//         resposta.style.height = null;
+//         resposta.style.padding = null;
+//     } else {
+//         resposta.style.height = "5rem";
+//         resposta.style.padding = ".5rem 1rem";
+//     }  
+// })
 
 // for(var i = 0; i < slide.lenght; i++) {
 //     slide[i].addEventListener('click', function () {
@@ -25,27 +26,26 @@ slide.addEventListener('click', function () {
 // }
 
 function pegarProdutos(){
-    var formulario = new URLSearchParams(new FormData(form_produto));
-    fetch("/usuarios/produtos",{
-        method: "POST",
-        body: formulario
-    }).then(resposta =>{
-    
-        if (resposta.ok){
-    
-            resposta.json().then(json =>{
-                sessionStorage.idProduto_usuario_meuapp = json.idProduto;
+    fetch(`/leituras/ProdutosCli/${email_usuario}`, { cache: 'no-store' }).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (resposta) {
+
+                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
+                resposta.reverse();
+
+                for (i = 0; i < resposta.length; i++) {
+                    var registro = resposta[i];
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                 
-            })
+                    // aqui, após 'registro.' use os nomes 
+                    // dos atributos que vem no JSON 
+                    // que gerou na consulta ao banco de dados
+
+                    select.innerHTML += `<option value="${registro.idProduto}">${registro.nomePlanta}</option><br>`
+                }
+            });
+        } else {
+            console.error('Nenhum dado encontrado ou erro na API');
         }
-        else{
-            alert(`erro ao pegar produto`);
-            // window.location.href = 'Login.html'
-        }
-    
     })}
-    
-    window.onload = function(){
-        numero.value = sessionStorage.idCliente_usuario_meuapp;
-        
-    }

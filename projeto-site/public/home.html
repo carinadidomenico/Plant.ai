@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css e js site/style.css">
-    <script src="./css e js site/grafico.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -18,17 +17,17 @@
             <a href="">Home</a>
             <a href="">Plantas</a>
             <a href="faq.html">FAQ</a>
-            <a href="">Sair</a>
+            <a onclick="logoff()">Sair</a>
         </div>
     </nav>
     <main>
         <section>
-                <select onclick="selectDash()" id="select">
+                <select id="select">
                         <option value="0">--Selecione Aqui--</option>
-                        <option value="1">Tomate</option>
+                        <!-- <option value="1">Tomate</option>
                         <option value="2">Morango</option>
                         <option value="3">Pimenta</option>
-                        <option value="4">Orquídea</option>
+                        <option value="4">Orquídea</option> -->
                     </select>
             
                  <div id="div_dash" style="width:75%; display: none">
@@ -37,5 +36,11 @@
         </section>
     </main>
 </body>
-
 </html>
+<script src="./css e js site/grafico.js"></script>
+<script src="./css e js site/funcoes.js"></script>
+<script>
+verificar_autenticacao()
+
+pegarProdutos()
+</script>
