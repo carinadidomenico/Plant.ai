@@ -17,7 +17,7 @@ main {
 
 .navbar {
     height: 100vh;
-    width: 16vw;
+    width: 14rem;
     background-color:#89e5b7;
     box-shadow: 1px 0px 10px #155434;
 }
@@ -55,7 +55,7 @@ main {
 /* INÍCIO FAQ */
 
 .faq {
-    width: 50rem;
+    width: 46rem;
     margin: auto;
 }
 
