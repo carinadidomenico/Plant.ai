@@ -14,7 +14,7 @@
             <img src="Logo/SVG/v1-H.svg" alt="">
         </div>
         <div class="navbar-links">
-            <a href="">Home</a>
+                <a href="">Home</a>
             <a href="plantas.html">Plantas</a>
             <a href="perfil.html">Perfil</a>
             <a href="faq.html">FAQ</a>
@@ -22,14 +22,15 @@
         </div>
     </nav>
     <main>
-        <section>
-                <select id="select">
-                        <option value="0">--Selecione Aqui--</option>
-                    </select>
-            
-                 <div id="div_dash" style="width:75%; display: none">
-                    <canvas id="canvas"></canvas>
-                </div>
+        <section class="perfil">
+            <h3 id="nome">Nome</h3>
+            <div class="perfil-dados">
+                <p id="email">email@email.com</p>
+                <p id="cpf">23212332-98</p>
+            </div> 
+            <div>
+                <p id="endereço">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, ipsam ex atque facere sequi eum accusamus porro! Excepturi incidunt quod deserunt atque voluptates? Repellendus delectus optio repellat necessitatibus quae assumenda.</p>
+            </div>               
         </section>
     </main>
 </body>
@@ -37,8 +38,3 @@
 <script src="./css e js site/grafico.js"></script>
 <script src="css e js site/dashboard.js"></script>
 <script src="./css e js site/funcoes.js"></script>
-<script>
-verificar_autenticacao()
-
-pegarProdutos()
-</script>
