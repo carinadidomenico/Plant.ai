@@ -10,11 +10,18 @@ function entrar() {
             resposta.json().then(json => {
 
 
-                sessionStorage.login_usuario_meuapp = json.email;
-                sessionStorage.nome_usuario_meuapp = json.nomeCliente;
-                sessionStorage.idCliente_usuario_meuapp = json.idCliente;
-                sessionStorage.idProduto_usuario_meuapp = json.idProduto;
-                window.location.href = 'SobreNos.html';
+                sessionStorage.idCliente_usuario = json.idCliente;
+                sessionStorage.nomeCliente_usuario = json.nomeCliente;
+                sessionStorage.CPF_usuario = json.CPF;
+                sessionStorage.email_usuario = json.email;
+                sessionStorage.senha_usuario = json.senha;
+                sessionStorage.conta_usuario = json.conta;
+                sessionStorage.estado_usuario = json.estado;
+                sessionStorage.cidade_usuario = json.cidade;
+                sessionStorage.bairro_usuario = json.bairro;
+                sessionStorage.rua_usuario = json.rua;
+                sessionStorage.NumeroRua_usuario = json.numeroRua;
+                window.location.href = 'home.html';
             });
 
         } else {

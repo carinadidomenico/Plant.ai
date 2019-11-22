@@ -75,19 +75,27 @@ router.get('/estatisticas', function (req, res, next) {
 });
 
 // estatísticas (max, min, média, mediana, quartis etc)
-router.get('/ProdutosCli', function (req, res, next) {
+router.get(`/ProdutosCli/:login`, function (req, res, next) {
+	console.log('entrando');
+	let cliente = req.params.login;
+	console.log('pegando cliente:', cliente);
 	
-	console.log(`RPegando os Produtos do Cliente`);
+	console.log(`Pegando os Produtos do Cliente`);
 
-	const instrucaoSql = `select * from Produto where fkCliente = ${}`;
+	const instrucaoSql = `select * from Produto,Planta,Cliente where email = '${cliente}' and fkPlanta = idPlanta and fkCliente=idCliente;`;
+	console.log(instrucaoSql);
 
-	sequelize.query(instrucaoSql, { type: sequelize.QueryTypes.SELECT })
-		.then(resultado => {
-			res.json(resultado[0]);
-		}).catch(erro => {
+	sequelize.query(instrucaoSql, {
+		model: Leitura,
+		mapToModel: true 
+	  })
+	  .then(resultado => {
+			console.log(`Encontrados: ${resultado.length}`);
+			res.json(resultado);
+	  }).catch(erro => {
 			console.error(erro);
 			res.status(500).send(erro.message);
-		});
+	  });
   
 });
 
