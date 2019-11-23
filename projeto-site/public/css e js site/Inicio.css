@@ -52,6 +52,14 @@ body{min-width: 700px;
 
                                 /* formato do menu do topo do site (pag.1) */
 
+
+#Home{
+    display: unset;
+    width: 12%;                                
+    height: 212%;                               
+                                       
+    }                                                                
+                                
 .menu{
     font-size: 27px;
     top: 0px;
@@ -227,38 +235,49 @@ fieldset b{
 
                             /* plano para arrumar a parte dos planos (pag.04) */
 
-.plano1{
-    display: flex;
+#palavra_plano{
+    
+    margin-bottom: 6%;
+}
+
+.planos{
     float: left;
-    height: 65%;
-    width: 42%;
+    height: 62%;
+    width: 44%;
     background-color: #A2C16A;
     text-align: center;
     margin-left: 70px;
     margin-top: -60px;
     border-radius: 10px;
+    font-size: 96%;
 }
 
-.plano1 img{
+.planos #tipo_plano{
+    font-size: 3.8vw;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    text-align: justify;
+    margin-top: none;
+    margin-left: 33.2%;
+    color: black;
+}
+
+.div_p{
+    font-size: 1.9vw;
+    margin-bottom: 6.5%;
+    text-align: justify;
     margin-left: 4%;
-    width: 92%;
+    color: black;
+    
 }
 
-.plano2{
-    display: flex;
-    float: right;
-    height: 65%;
-    width: 42%;
-    background-color: #A2C16A;
-    margin-right: 70px;
-    margin-top: -60px;
-    border-radius: 10px;
+.div_img{
+    width: 9% ;
+    margin-right: 4%;
+    
 }
 
-.plano2 img{
-    margin-left: 4%;
-    width: 92%;
-}
+
 
 .financa{
     color: black;
