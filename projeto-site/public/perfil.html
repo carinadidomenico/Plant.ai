@@ -36,21 +36,21 @@
             <div class="perfil-content">
                 <div class="perfil-nome">
                     <img class="perfil-foto" src="imagens site/foto-perfil.png" alt="foo do perfil">
-                    <h3 id="nome">Nome Sobrenome</h3>
+                    <h3 id="idNome">Nome Sobrenome</h3>
                 </div>
                 <div class="perfil-dados">
-                    <p id="email">email@email.com</p>
-                    <p id="cpf">23212332-98</p>
+                    <p id="idEmail">email@email.com</p>
+                    <p id="idCPF">23212332-98</p>
                 </div>
                 <div class="perfil-endereco">
                     <div>
-                        <p id="endereço">Rua tal tal tal</p>
-                        <p id="endereço">Número</p>
-                        <p id="endereço">Complemento</p>
+                        <p id="idRua">Rua tal tal tal</p>
+                        <p id="idNumero">Número</p>
+                        <p id="idEstado">Complemento</p>
                     </div>
                     <div>
-                        <p>São Paulo</p>
-                        <p>SP</p>
+                        <p id="idCidade">São Paulo</p>
+                        <p id="idBairro">SP</p>
                     </div>
                 </div>               
             </div>
@@ -65,3 +65,17 @@
 <script src="./css e js site/funcoes.js"></script>
 <script src="css e js site/helpdesk.js"></script>
 </html>
+<script>
+    function dadosCliente(){
+        idNome.innerHTML = sessionStorage.nomeCliente_usuario;
+        idEmail.innerHTML = sessionStorage.email_usuario;
+        idCPF.innerHTML = sessionStorage.CPF_usuario;
+        idRua.innerHTML = sessionStorage.rua_usuario;
+        idNumero.innerHTML = sessionStorage.NumeroRua_usuario;
+        idEstado.innerHTML = sessionStorage.estado_usuario;
+        idCidade.innerHTML = sessionStorage.cidade_usuario;
+        idBairro.innerHTML = sessionStorage.bairro_usuario;
+    }
+
+    dadosCliente()
+</script>
