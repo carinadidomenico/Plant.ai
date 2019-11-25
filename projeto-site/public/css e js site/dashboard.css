@@ -16,10 +16,15 @@ main {
 /* NAVBAR */
 
 .navbar {
+    position: initial;
     height: 100vh;
     width: 14rem;
     background-color:#89e5b7;
     box-shadow: 1px 0px 10px #155434;
+}
+
+.navbar-container {
+    position: fixed;
 }
 
 .navbar-links {
@@ -35,6 +40,7 @@ main {
     text-decoration: none;
     font-size: 1.5rem;
     color: #155434;
+    cursor: pointer;
 }
 
 .navbar-links a:hover {
@@ -45,7 +51,7 @@ main {
 
 .navbar-img {
     width: fit-content;
-    margin: 0 auto;
+    margin: .7rem auto;
 }
 
 .navbar-img img {
@@ -59,7 +65,7 @@ main {
     border-radius: 5px;
     display: flex;
     margin-top: 4rem;
-    width: 46rem;
+    width: 40rem;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -67,15 +73,25 @@ main {
     padding: 2rem;
 }
 
-.perfil-dados {
+.perfil-content {
     width: 30rem;
+}
+
+.perfil-dados {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 .perfil-foto {
     width: 5rem;
+}
+
+.perfil-nome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* INÍCIO FAQ */
@@ -88,6 +104,7 @@ main {
 .faq-pergunta{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #89e5b7;
     margin-top: 1rem;
     padding: .5rem 1rem;
@@ -96,9 +113,52 @@ main {
 .faq-resposta {
     background-color: #89e5b7;
     height: 0;
-    padding: .5rem 1rem;
+    padding: 0;
     overflow: hidden;
     transition: 0.5s ease-in-out;
+}
+
+/* BUSCA */
+
+.buscar {
+    width: 46rem;
+    margin: 3rem auto;
+}
+
+.buscar-planta {
+    width: 46rem;
+    padding: 1rem;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+/* TABELAS */
+
+.tabelas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+table {
+    width: 30rem;
+    height: 30rem;
+    font-size: 1.1rem;
+    margin: 3rem auto;
+    border-collapse: collapse;
+}
+
+thead, tbody, tr, td, th {
+    border: 1px solid grey;
+    padding: .5rem;
+}
+
+tr {
+    font-weight: bold;
+}
+
+thead {
+    background-color: lightsalmon;
+    font-size: 1.5rem;
 }
 
 /* SCROLL */

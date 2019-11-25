@@ -9,36 +9,50 @@
     <title>Document</title>
 </head>
 <body>
+
+    <!-- INÍCIO NAVBAR -->
+
     <nav class="navbar">
-        <div class="navbar-img">
-            <img src="Logo/SVG/v1-H.svg" alt="">
-        </div>
-        <div class="navbar-links">
-            <a href="">Home</a>
-            <a href="plantas.html">Plantas</a>
-            <a href="perfil.html">Perfil</a>
-            <a href="faq.html">FAQ</a>
-            <a onclick="logoff()">Sair</a>
+        <div class="navbar-container">
+            <div class="navbar-img">
+                <img src="Logo/SVG/v1-H.svg" alt="">
+            </div>
+            <div class="navbar-links">
+                <a href="">Home</a>
+                <a href="plantas.html">Plantas</a>
+                <a href="perfil.html">Perfil</a>
+                <a href="faq.html">FAQ</a>
+                <a onclick="logoff()">Sair</a>
+            </div>
         </div>
     </nav>
+
+    <!-- FINAL NAVBAR -->
+
+    <!-- INÍCIO CONTEUDO -->
+
     <main>
         <section>
-                <select id="select">
-                        <option value="0">--Selecione Aqui--</option>
-                    </select>
+            <select id="select">
+                <option value="0">--Selecione Aqui--</option>
+            </select>
             
-                 <div id="div_dash" style="width:75%; display: none">
-                    <canvas id="canvas"></canvas>
-                </div>
+            <div id="div_dash" style="width:75%; display: none">
+                <canvas id="canvas"></canvas>
+            </div>
         </section>
     </main>
+
+    <!-- FINAL CONTEÚDO -->
+    
 </body>
 </html>
 <script src="./css e js site/grafico.js"></script>
 <script src="css e js site/dashboard.js"></script>
 <script src="./css e js site/funcoes.js"></script>
+<script src="css e js site/helpdesk.js"></script>
 <script>
-verificar_autenticacao()
-
-pegarProdutos()
+    verificar_autenticacao()
+    
+    pegarProdutos()
 </script>
