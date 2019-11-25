@@ -55,10 +55,11 @@ body{min-width: 700px;
 
 #Home{
     display: unset;
-    width: 12%;                                
-    height: 212%;                               
-                                       
-    }                                                                
+    width: 12%;                                                                       
+}    
+#home img {margin-left: 30px;
+    height: 100px;}                                                            
+                                                               
                                 
 .menu{
     font-size: 27px;
