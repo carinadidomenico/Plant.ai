@@ -24,14 +24,14 @@ function pegarProdutos(){
     })
 }
 
-var exibiu_grafico = false;
 
+var exibiu_grafico = true;
 
-    // só mexer se quiser alterar o tempo de atualização
+// só mexer se quiser alterar o tempo de atualização
     // ou se souber o que está fazendo!
     function atualizarGrafico() {
         obterDadosGrafico();
-        setTimeout(atualizarGrafico, 10000);
+        setTimeout(atualizarGrafico, 1000);
     }
 
     // altere aqui as configurações do gráfico
@@ -83,16 +83,16 @@ var exibiu_grafico = false;
                 {
                     yAxisID: 'y-temperatura',
                     label: 'Temperatura',
-                    borderColor: 'rgba(255, 0,0 )',
-                    backgroundColor: 'rgba(255, 0,0 )',
+                    borderColor: 'rgb(255,0,0)',
+                    backgroundColor: 'rgb(255,0,0)',
                     fill: false,
                     data: []
                 },
                 {
                     yAxisID: 'y-umidade',
                     label: 'Umidade',
-                    borderColor: 'rgba(0,255,0 )',
-                    backgroundColor: 'rgba(0,255,0 )',
+                    borderColor: 'rgb(0,0,255)',
+                    backgroundColor: 'rgb(0,0,255)',
                     fill: false,
                     data: []
                 }
@@ -114,12 +114,14 @@ var exibiu_grafico = false;
                         // dos atributos que vem no JSON 
                         // que gerou na consulta ao banco de dados
 
-                        dados.labels.push(registro.momento);
+                        dados.labels.push(registro.momento_grafico);
 
                         dados.datasets[0].data.push(registro.regTemperatura);
                         dados.datasets[1].data.push(registro.regUmidade);
                     }
                     console.log(JSON.stringify(dados));
+
+                    div_aguarde.style.display = 'none';
 
                     plotarGrafico(dados);
                 });
@@ -137,8 +139,8 @@ var exibiu_grafico = false;
     function plotarGrafico(dados) {
         console.log('iniciando plotagem do gráfico...');
 
-        var ctx = document.getElementById('canvas').getContext('2d');
-        window.grafico_linha = new Chart(ctx, {
+        var ctx = canvas_grafico.getContext('2d');
+        window.grafico_linha = Chart.Line(ctx, {
             data: dados,
             options: configurarGrafico()
         });

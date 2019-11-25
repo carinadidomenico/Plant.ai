@@ -63,7 +63,7 @@ function iniciar_escuta() {
                 // O Arduino deve enviar a temperatura e umidade de uma vez,
                 // separadas por ":" (temperatura : umidade)
                 var leitura = dados.split(';');
-                registrar_leitura(Number(leitura[0]), Number(leitura[1]),Number(leitura[2]));
+                registrar_leitura(Number(leitura[0]), Number(leitura[1]),Number(leitura[2]),Number(leitura[3]));
             } catch (e) {
                 throw new Error(`Erro ao tratar os dados recebidos do Arduino: ${e}`);
             }
@@ -76,7 +76,7 @@ function iniciar_escuta() {
 
 // função que recebe valores de temperatura e umidade
 // e faz um insert no banco de dados
-function registrar_leitura(fkProduto, temperatura, umidade) {
+function registrar_leitura(idRegistro, fkProduto, temperatura, umidade) {
 
     // if (efetuando_insert) {
     //     console.log('Execução em curso. Aguardando 7s...');
@@ -87,7 +87,7 @@ function registrar_leitura(fkProduto, temperatura, umidade) {
     // }
 
     efetuando_insert = true;
-
+    console.log(`id: ${idRegistro}`);
     console.log(`temperatura: ${temperatura}`);
     console.log(`umidade: ${umidade}`);
     console.log(`constante ${fkProduto}`);
@@ -95,8 +95,7 @@ function registrar_leitura(fkProduto, temperatura, umidade) {
     banco.conectar().then(() => {
         
 
-        return banco.sql.query(`INSERT into Registro (idRegistro ,fkProduto, regTemperatura, regUmidade, regTemporal)
-                                values (10,${fkProduto},${temperatura}, ${umidade}, CONVERT(Datetime, '${agora()}', 120));`);
+        return banco.sql.query(`INSERT into Registro values (${idRegistro},${fkProduto},${umidade}, ${temperatura}, CONVERT(Datetime, '${agora()}', 120));`);
 
     }).catch(erro => {
 

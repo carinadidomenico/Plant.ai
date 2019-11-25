@@ -1,7 +1,11 @@
 /* BASE */
 
+html{
+    margin: 0%;
+}
+
 body {
-    margin: 0;
+    margin: 0%;
     box-sizing: border-box;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
@@ -11,6 +15,11 @@ body {
 
 main {
     width: 100vw;
+}
+
+.graficos {
+    width: 700px;
+    height: 700px;
 }
 
 
@@ -62,11 +71,17 @@ main {
 
 /* INÍCIO GRAFICOS */
 
-.graficos {
-    width: 46rem;
+
+.selection {
     margin: 3rem auto;
+    margin-left: 30%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+.aa{
+    display: inline;
 }
 
 /* INÍCIO PERFIL  */
