@@ -31,5 +31,5 @@ void loop() {
   Serial.println((int)humidity);
   
   // DHT11 sampling rate is 1HZ.
-  delay(1500);
+  delay(600000);
 }
