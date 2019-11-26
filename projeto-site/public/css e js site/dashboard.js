@@ -1,29 +1,21 @@
 var resposta = document.getElementsByClassName("faq-resposta");
+var pergunta = document.getElementsByClassName("faq-pergunta");
 var slide = document.getElementsByClassName("slide");
 
 
 // FAQ
 
-// slide.addEventListener('click', function () {
-//     if (resposta.style.height){
-//         resposta.style.height = null;
-//         resposta.style.padding = null;
-//     } else {
-//         resposta.style.height = "5rem";
-//         resposta.style.padding = ".5rem 1rem";
-//     }  
-// })
-
-
 for (var i = 0; i < slide.length; i++) {
-    slide[i].addEventListener('click', function(){
+    slide[i].addEventListener('click', function() {
         for(var i = 0; i < resposta.length; i++) {
             if(resposta[i].style.height) {
                 resposta[i].style.height = null;
                 resposta[i].style.padding = null;
+                pergunta[i].style.borderRadius = "20px";
             } else {
                 resposta[i].style.height = "5rem";
-                resposta[i].style.padding = ".5rem 1rem"
+                resposta[i].style.padding = ".5rem 1rem";
+                pergunta[i].style.borderRadius = "20px 20px 0 0";
             }
         }
     });
@@ -114,4 +106,4 @@ pesquisar.addEventListener('keyup', function() {
     })
 
     document.querySelector(".tabelas").innerHTML = insertTable(filtro)    
-})
+});
