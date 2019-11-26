@@ -4,7 +4,6 @@ var sequelize = require('../models').sequelize;
 var Usuario = require('../models').Usuario;
 
 let sessoes = [];
-let produtos = [];
 
 /* Recuperar usuário por email e senha */
 router.post('/autenticar', function(req, res, next) {

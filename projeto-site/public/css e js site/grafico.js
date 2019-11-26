@@ -31,36 +31,36 @@ var exibiu_grafico = true;
     // ou se souber o que está fazendo!
     function atualizarGrafico() {
         obterDadosGrafico();
-        setTimeout(atualizarGrafico, 1000);
+        setTimeout(atualizarGrafico, 5000);
     }
 
     // altere aqui as configurações do gráfico
     // (tamanhos, cores, textos, etc)
     function configurarGrafico() {
-        var configuracoes = {
+        var configurações = {
             responsive: true,
             animation: exibiu_grafico ? false : {duration: 1500},
             hoverMode: 'index',
             stacked: false,
             title: {
                 display: true,
-                text: 'Histórico recente de temperatura e umidade'
+                text: 'Histórico recente de umidade e Temperatura'
             },
             scales: {
                 yAxes: [{
                     type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
-                    display: true,
+                    display: false,
                     position: 'left',
-                    id: 'y-temperatura',
+                    id: 'n usado',
                 }, {
                     type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
                     display: true,
-                    position: 'right',
-                    id: 'y-umidade',
+                    position: 'left',
+                    id: 'valor',
 
                     // grid line settings
                     gridLines: {
-                        drawOnChartArea: false, // only want the grid lines for one axis to show up
+                        drawOnChartArea: true, // only want the grid lines for one axis to show up
                     },
                 }],
             }
@@ -68,7 +68,7 @@ var exibiu_grafico = true;
 
         exibiu_grafico = true;
 
-        return configuracoes;
+        return configurações;
     }
 
     // altere aqui como os dados serão exibidos
@@ -81,25 +81,26 @@ var exibiu_grafico = true;
             labels: [],
             datasets: [
                 {
-                    yAxisID: 'y-temperatura',
-                    label: 'Temperatura',
+                    yAxisID: 'valor',
+                    label: 'temperatura(Cº)',
                     borderColor: 'rgb(255,0,0)',
                     backgroundColor: 'rgb(255,0,0)',
                     fill: false,
                     data: []
                 },
                 {
-                    yAxisID: 'y-umidade',
-                    label: 'Umidade',
-                    borderColor: 'rgb(0,0,255)',
-                    backgroundColor: 'rgb(0,0,255)',
+                    yAxisID: 'valor',
+                    label: 'Umidade(%)',
+                    borderColor: 'rgb(0,0,200)',
+                    backgroundColor: 'rgb(0,0,200)',
                     fill: false,
                     data: []
                 }
             ]
         };
 
-        fetch('/leituras/ultimas', { cache: 'no-store' }).then(function (response) {
+        fetch('/leituras/ultimas', { cache: 'no-store' }).then(function (response)
+         {
             if (response.ok) {
                 response.json().then(function (resposta) {
 
@@ -109,8 +110,9 @@ var exibiu_grafico = true;
 
                     for (i = 0; i < resposta.length; i++) {
                         var registro = resposta[i];
-                    
-                        // aqui, após 'registro.' use os nomes 
+
+                        if(registro.fkProduto == select.value){
+                             // aqui, após 'registro.' use os nomes 
                         // dos atributos que vem no JSON 
                         // que gerou na consulta ao banco de dados
 
@@ -118,6 +120,12 @@ var exibiu_grafico = true;
 
                         dados.datasets[0].data.push(registro.regTemperatura);
                         dados.datasets[1].data.push(registro.regUmidade);
+                        }
+
+                        if (dados.datasets.length == 7){
+                            break;
+                        }
+                
                     }
                     console.log(JSON.stringify(dados));
 
