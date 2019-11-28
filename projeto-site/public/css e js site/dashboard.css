@@ -107,6 +107,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 5%;
 }
 
 .perfil-foto {
@@ -123,6 +124,14 @@ main {
 .perfil-endereco {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.perfil-endereco1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* INÍCIO FAQ */
