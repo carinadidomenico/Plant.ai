@@ -1,7 +1,7 @@
 create table Cliente 
 (
 	idCliente int identity(1,1) primary key,
-    nome varchar (80),
+    nomeCliente varchar (80),
     CPF varchar (12),
     email varchar (80),
     senha varchar (40),
@@ -17,7 +17,7 @@ create table Cliente
 create table Planta
 (
 	idPlanta int identity(201,1) primary key,
-    nome varchar (50),
+    nomePlanta varchar (50),
     tempMinima DECIMAL (4,2),
     tempPriQuartil DECIMAL (4,2),
     tempTerQuartilT DECIMAL (4,2),

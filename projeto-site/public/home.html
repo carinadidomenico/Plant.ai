@@ -32,17 +32,50 @@
         </div>
     </nav>
         <div>
-        <select class="selection" id="select">
-            <option value="0">--Selecione Aqui--</option>
+        <select onchange="mudandoPlanta()"class="selection" id="comboBox">
+            <option value="0"selected> --Selecione Aqui--</option>
         </select>
         <div class="graficos">
         <div>
             <div id="div_aguarde">Dados sendo obtidos...</div>
             <canvas id="canvas_grafico"></canvas>
-            <canvas id="canvas_grafico1"></canvas>
         </div>
         </div>
         </div>
+        <table>
+            <thead>
+                    <th id="nomePlanta" colspan="4">Infos</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Temperatura Crítica</td>
+                    <td id="tempMax">   //   </td>
+                    <td>Umidade Crítica</td>
+                    <td id="umiMax">   //   </td>
+                </tr>
+                <tr>
+                    <td>Temperatura alta</td>
+                    <td id="tempTerQua">   //   </td>
+                    <td>umidade alta</td>
+                    <td id="umiTerQua">   //   </td>
+                </tr>
+                <tr>
+                    <td> Temperatura baixa</td>
+                    <td id="tempPriQua">   //   </td>
+                    <td>Umidade baixa</td>
+                    <td id="umiPriQua">   //   </td>
+                </tr>
+                <tr>
+                    <td>Temperatura crítica</td>
+                    <td id="tempMin">   //   </td>
+                    <td>Umidade crítica</td>
+                    <td id="umiMin">   //   </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div id="alerta_temp"></div><br>
+        <div id="alerta_umi"></div>
 </body>
 </html>
 <script>
