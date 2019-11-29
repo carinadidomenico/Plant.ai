@@ -5,19 +5,22 @@ var slide = document.getElementsByClassName("slide");
 
 // FAQ
 
-for (var i = 0; i < slide.length; i++) {
+for (let i = 0; i < slide.length; i++) {
+
     slide[i].addEventListener('click', function() {
-        for(var i = 0; i < resposta.length; i++) {
-            if(resposta[i].style.height) {
-                resposta[i].style.height = null;
-                resposta[i].style.padding = null;
-                pergunta[i].style.borderRadius = "20px";
+            var p = this.parentNode;
+            var r = p.nextElementSibling;
+            console.log(p);
+            console.log(r);
+            if(r.style.height) {
+                r.style.height = null;
+                r.style.padding = null;
+                p.style.borderRadius = "20px";
             } else {
-                resposta[i].style.height = "5rem";
-                resposta[i].style.padding = ".5rem 1rem";
-                pergunta[i].style.borderRadius = "20px 20px 0 0";
+                r.style.height = "5rem";
+                r.style.padding = ".5rem 1rem";
+                p.style.borderRadius = "20px 20px 0 0";
             }
-        }
     });
 }
 
