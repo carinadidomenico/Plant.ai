@@ -37,15 +37,27 @@ router.get('/tempo-real', function (req, res, next) {
 	
 	console.log(`Recuperando as últimas leituras`);
 
-	const instrucaoSql = `select top 1 regTemperatura, regUmidade from leitura order by fkProduto desc`;
+	const instrucaoSql = `select * from Registro order by idRegistro`;
 
-	sequelize.query(instrucaoSql, { type: sequelize.QueryTypes.SELECT })
-		.then(resultado => {
-			res.json(resultado[0]);
-		}).catch(erro => {
+	// sequelize.query(instrucaoSql, { type: sequelize.QueryTypes.SELECT })
+	// 	.then(resultado => {
+	// 		res.json(resultado[0]);
+	// 	}).catch(erro => {
+	// 		console.error(erro);
+	// 		res.status(500).send(erro.message);
+	// 	});
+
+	sequelize.query(instrucaoSql, {
+		model: Leitura,
+		mapToModel: true 
+	  })
+	  .then(resultado => {
+			console.log(`Encontrados: ${resultado.length}`);
+			res.json(resultado);
+	  }).catch(erro => {
 			console.error(erro);
 			res.status(500).send(erro.message);
-		});
+	  });
   
 });
 
@@ -74,7 +86,7 @@ router.get('/estatisticas', function (req, res, next) {
   
 });
 
-// estatísticas (max, min, média, mediana, quartis etc)
+// ProdutosCli (pega todos os produtos do cliente etc)
 router.get(`/ProdutosCli/:login`, function (req, res, next) {
 	console.log('entrando');
 	let cliente = req.params.login;
@@ -99,5 +111,27 @@ router.get(`/ProdutosCli/:login`, function (req, res, next) {
   
 });
 
+// ProdutosCli (pega todos os produtos do cliente etc)
+router.get(`/plantaCli`, function (req, res, next) {
+	console.log('entrando');
+	
+	console.log(`pegando as plantas`);
+
+	const instrucaoSql = `select * from Planta;`;
+	console.log(instrucaoSql);
+
+	sequelize.query(instrucaoSql, {
+		model: Leitura,
+		mapToModel: true 
+	  })
+	  .then(resultado => {
+			console.log(`Encontrados: ${resultado.length}`);
+			res.json(resultado);
+	  }).catch(erro => {
+			console.error(erro);
+			res.status(500).send(erro.message);
+	  });
+  
+});
 
 module.exports = router;
