@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,11 @@
     <link rel="stylesheet" href="./css e js site/dashboard.css">
     <title>Plant.ai</title>
 </head>
+
 <body>
-    
+
     <!-- INÍCIO NAVBAR -->
-    
+
     <nav class="navbar">
         <div class="navbar-container">
             <div class="navbar-img">
@@ -19,18 +21,18 @@
             </div>
             <div class="navbar-links">
                 <a href="home.html">Home</a>
-                <a href="plantas.html">Plantas</a>
+                <a id="btnPlanta" href="plantas.html">Plantas</a>
                 <a href="perfil.html">Perfil</a>
                 <a href="faq.html">FAQ</a>
                 <a onclick="logoff()">Sair</a>
             </div>
         </div>
     </nav>
-    
+
     <!-- FINAL NAVBAR -->
-    
+
     <!-- INÍCIO CONTEUDO -->
-    
+
     <main>
         <section class="perfil">
             <div class="perfil-content">
@@ -52,7 +54,7 @@
                     <div>
                         <b>Estado:</b>
                         <p id="idEstado">Estado</p>
-                    </div>        
+                    </div>
                     <div>
                         <b>Cidade:</b>
                         <p id="idCidade">São Paulo</p>
@@ -62,7 +64,7 @@
                         <p id="idBairro">SP</p>
                     </div>
                 </div>
-                <div class="perfil-endereco1">    
+                <div class="perfil-endereco1">
                     <div>
                         <b>Rua:</b>
                         <p id="idRua">Rua tal tal tal</p>
@@ -75,21 +77,22 @@
                         <b>Tipo de conta: </b>
                         <p id="idConta">Conta</p>
                     </div>
-                </div>               
+                </div>
             </div>
         </section>
     </main>
-    
+
     <!-- FINAL CONTEÚDO -->
-    
+
 </body>
 <script src="./css e js site/grafico.js"></script>
 <script src="css e js site/dashboard.js"></script>
 <script src="./css e js site/funcoes.js"></script>
 <script src="css e js site/helpdesk.js"></script>
+
 </html>
 <script>
-    function dadosCliente(){
+    function dadosCliente() {
         idNome.innerHTML = sessionStorage.nomeCliente_usuario;
         idEmail.innerHTML = sessionStorage.email_usuario;
         idCPF.innerHTML = sessionStorage.CPF_usuario;
@@ -98,12 +101,13 @@
         idEstado.innerHTML = sessionStorage.estado_usuario;
         idCidade.innerHTML = sessionStorage.cidade_usuario;
         idBairro.innerHTML = sessionStorage.bairro_usuario;
-        if (sessionStorage.conta_usuario == 'f'){
+        if (sessionStorage.conta_usuario == 'f') {
             idConta.innerHTML = 'Free'
-        }else{
+        } else {
             idConta.innerHTML = 'Premium'
         }
     }
 
-    dadosCliente()
+    dadosCliente();
+    tipoCliente();
 </script>

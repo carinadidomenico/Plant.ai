@@ -5,6 +5,15 @@ function redirecionar_login() {
     window.location.href = 'login.html';
 }
 
+function tipoCliente(){
+    if (sessionStorage.conta_usuario = "p"){
+        // coloque aq sua ideia (CAIO)
+        btnPlanta.disabled = true
+    } else {
+        btnPlanta.disabled = false
+    }
+}
+
 function verificar_autenticacao() {
 
     email_usuario = sessionStorage.email_usuario;
