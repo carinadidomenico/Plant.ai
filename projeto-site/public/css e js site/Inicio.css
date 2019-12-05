@@ -2,7 +2,7 @@
 
 html{scroll-behavior: smooth;}
 
-body{min-width: 700px;
+body{min-width: 51.224vw;
     font-family: 'Roboto', sans-serif;
  
 }
@@ -15,9 +15,9 @@ body{min-width: 700px;
 .visivel{
     
     position: fixed;
-    bottom: 60px;
-    left: 30px;
-    width: 100px;
+    bottom: 4.392vw;
+    left: 2.196vw;
+    width: 7.320vw;
     z-index: 1;
     display: block;
     
@@ -28,25 +28,25 @@ body{min-width: 700px;
 .verde{
     background-image: url("../imagens\ site/planta11.jpg") ;
     background-size: cover;
-    height: 680px;
+    height: 54.780vw;
     text-align: center;
-    margin-top: 0%;
+    
 }
 
 
 .pf{
-    min-inline-size: 00px;
+  
     color: black;
-    font-size: 35px;
-    margin-bottom: 0px;
-    margin-top: 0%;
+    font-size: 2.562vw;
+    
+    
 }
 
 .topo{
     background-image: url("../imagens\ site/planta2.jpg");
     background-size: cover;
     width: 100%;
-    height: 680px;
+    height: 49.780vw;
     text-align: center;
 }
 
@@ -57,26 +57,25 @@ body{min-width: 700px;
     display: unset;
     width: 12%;                                                                       
 }    
-#home img {margin-left: 30px;
-    height: 100px;}                                                            
+#home img {
+    margin-left: 2.196vw;
+    height: 7.320vw;}                                                            
                                                                
                                 
 .menu{
-    font-size: 27px;
-    top: 0px;
-    left: 0px;
+    font-size: 1.976vw;
   display: inline-block;
     background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
-    height: 100px;
+    height: 7.320vw;
 }
 
 .btn {
-    border: 2px solid black;
+    border: 0.14vw solid black;
     background-color: rgb(253, 241, 241,0);
     color: white;
-    padding: 14px 28px;
-    font-size: 16px;
+    padding: 1.024vw 2.049vw;
+    font-size: 1.171vw ;
     cursor: pointer;
   }
   
@@ -94,104 +93,106 @@ body{min-width: 700px;
     color: white;
   }
   .btn {
-    border-radius: 5px;
+    border-radius: 0.066vw;
   }
 
 .menu img{
-    margin-left: 30px;
-    height: 100px;
+    margin-left: 2.196vw;
+    height: 7.320vw;    
     float: left;    
 }
 
 a{
     margin-left: 2%;
     margin-right: 2%;
-    line-height: 90px;
+    line-height:6.588vw;
     text-decoration: none;
     color: white;
     border-color: green;
     
 }
 .a {
-    border-radius: 5px;
+    border-radius: 0.366vw; ;
   }
 a:hover{
     color: rgb(14, 173, 14);
-    transition: 2s;
+    transition: 1s;
 }
 
 .frase {                /* frase de início da página inicial */
     margin: auto;
     width: 70vw;        
-    margin-top: 16vh;
-    padding: 3vh;
-    font-size: 24px;
+    margin-top: 7.320vw;
+    padding: 1.372vw;
+    font-size: 1.756vw; ;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.3);
     color: white;
 }
 
 button{
-    margin-top: 6vh;
+    margin-top: 2.745vw;
     background-color: rgb(253, 241, 241,0);
     color: rgb(135, 206, 29);
-    height: 8vh;
+    height: 3.366vw;
     width: 11vw;
-    font-size: 20px;
-    min-width: 125px;
+    font-size: 1.464vw;
+    min-width: 9.150vw;
+    border-radius: 0.366vw;
+    border-color: green;
 }
 button{
     transition: 1s;
   }
-button{border-radius: 5px;
-    border-color: green;}
 
-button:hover{font-size: 23px;
+
+button:hover{
+    font-size: 1.683vw;
     color: white;
     background-color: #4CAF50;
+    
    
 }        
 .topo button{
-    margin-top: 3vh;
+    margin-top: 1.372vw;
     background-color: rgb(253, 241, 241,0);
     color:white;
-    height: 8vh;
+    height: 3.366vw;
     width: 11vw;
-    font-size: 20px;
-    min-width: 125px;
+    font-size: 1.464vw;
+    min-width: 9.150vw;
 }
-.frasebot button{ margin-top: 18vh;
+.frasebot button{ 
+    margin-top: 8.235vw;
 }
 .topo button{
     transition: 1s;
   }
-.topo button{border-radius: 5px;
+.topo button{
+    border-radius: 0.366vw;
     border-color: green;}
 
-.topo button:hover{font-size: 23px;
+.topo button:hover{
+    font-size: 1.683vw;
     color: white;
     background-color: #4CAF50;
+    height: 5.366vw;
+    width: 13.366vw;
    
 }       /* botão muda ao passar o mouse */
 
                                 /* Parte onde fala do produto (pag.2) */
 
-
-
 .escrito div{
     margin: auto;
     width: 70vw;        
-    margin-top: 16vh;
-    padding: 3vh;
-    font-size: 24px;
+    margin-top: 7.320vw;
+    padding: 1.372vw;
+    font-size: 1.756vw;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.3);
-    color: white;
-
-    
+    color: white;    
 }
-
-
 
 p{
     text-align: center;
@@ -207,31 +208,33 @@ p{
     justify-content: space-between;
     align-items: center;
     width: 65vw;
-    margin: 50px auto;
+    margin: 3.660vw auto;
     }
-.foto img{width: 15vh;}
+.foto img{
+    width: 6.863vw;
+}
 
                                             /* parte do FAQ (pag.3) */
 
 fieldset{               /* fieldset é quase uma div, poder automaticamente mostra a borda */
-    margin-bottom: 30px;
-    height: 67px;
+    margin-bottom: 2.196vw;
+    height: 4.904vw;
     margin-left: 4%;
     margin-right: 4%;
-    border-radius: 10px;
+    border-radius: 0.732vw;
 }
 
 fieldset img{
     float: right;
-    margin-right: 30px;
-    width: 70px;
+    margin-right: 2.196vw;
+    width: 5.124vw;
 }
 
 fieldset b{
     float: left;
-    margin-top: 17px;
-    margin-left: 10px;
-    font-size: 30px;
+    margin-top: 1.244vw;;
+    margin-left: 0.732vw;
+    font-size: 2.196vw;
 }
 
                             /* plano para arrumar a parte dos planos (pag.04) */
@@ -239,6 +242,7 @@ fieldset b{
 #palavra_plano{
     
     margin-bottom: 6%;
+
 }
 
 .planos{
@@ -247,9 +251,8 @@ fieldset b{
     width: 44%;
     background-color: #A2C16A;
     text-align: center;
-    margin-left: 70px;
-    margin-top: -60px;
-    border-radius: 10px;
+    margin-left: 5.124vw;
+    border-radius: 0.732vw;
     font-size: 96%;
 }
 
@@ -268,8 +271,7 @@ fieldset b{
     margin-bottom: 6.5%;
     text-align: justify;
     margin-left: 4%;
-    color: black;
-    
+    color: black;  
 }
 
 .div_img{
@@ -278,48 +280,55 @@ fieldset b{
     
 }
 
-
-
 .financa{
     color: black;
     background-color: #A2C16A;
     font-weight: bold;
-    width: 250px;
+    width: 18.301vw;
+    
+}
+
+.financa:hover{
+    width:20.0vw;
+    height: 4.0vw;
 }
 
                                 /* parte de contato do site (pag.05) */
-.contato{height: 600px;
+.contato{
+    height: 40.923vw;
     width: 82vw;
-    margin: 0 auto;
+    margin: 0vw auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     font-family: 'Roboto', sans-serif;
+    margin-bottom: 8.0vw
   }
 
-
-
-.form{ float: left;
+.form{ 
+    float: left;
    margin-left: 2%;
     color: green;
     
     width: 45% !important;
     height: 83% !important;
 }
-input,textarea{ width: 50%; transition: 1.5s;}
+input,textarea{ width: 50%; transition: 1s;}
 
 input:focus, textarea:focus{
-    border: 2px solid green;
+    border: 0.146vw solid green;
     width: 70%;
+}
+#enviar{
+margin-top: 1.0vw
 }
 
 
 /* comando para arrumar o formato do maps do site */
 .mapa{     
     float: right;
-    margin-right: 2%;
-border: 0%;   
+    margin-right: 2%;  
     width: 50% !important;
     height: 83% !important;
    
@@ -331,7 +340,18 @@ border: 0%;
 }
 .form b{
     text-align: center;
-    font-size: 30px;
+    font-size: 2.196vw;
+}
+
+.div_redes{
+    margin-bottom: 1.0vw;
+    margin-top: 1.0vw;
+}
+
+.redes{
+    width: 4vw;
+    margin-right: 1.0vw;
+    
 }
 
 
@@ -340,14 +360,19 @@ border: 0%;
 
 .fim{
     background-color: #24332C;
-    height: 60px;
+    height: 4.392vw;
     text-align: center;
+    font-size: 1.267vw;
+    vertical-align: center;
+    
 }
+
 
 .fim h2{
     color: #A2C16A;
-    margin-bottom: 100px;
-    margin: 0%;
+    margin-bottom: 1.520vw;
+    margin-top: 0.0vw;
+   
 }
 
 #comTomTicketChatWidget, .tomticketChat-status-chat {
@@ -356,37 +381,37 @@ border: 0%;
 
                     /* formato para mudar os comandos apenas em certas ocasioes */
 
-@media only screen and (max-width: 900px) {     /* muda apenas quando width chegar aos 900px */
+@media only screen and (max-width: 65.885vw) {     /* muda apenas quando width chegar aos 900px */
     input{
         width: 70%;
     }
     fieldset b{
         font-size: 3vw;
-        margin-top: 20px;
+        margin-top: 1.464vw;
     }
     .tamanho_foto{
         margin-top: 38%;
     }
     .plano1{
         width: 38%;
-        margin-top: -30px;
+        margin-top: -2.196vw;
     }
     .plano2{
         width: 38%;
-        margin-top: -30px;
+        margin-top: -2.196vw;
     }
 }
 
-@media only screen and (max-width: 640px) {     /* muda apenas quando width chegar aos 640px */
+@media only screen and (max-width: 46.852vw) {     /* muda apenas quando width chegar aos 640px */
     fieldset b{
-        font-size: 18px;
-        margin-top: 25px;
+        font-size: 1.317vw;
+        margin-top: 1.830vw;
     }
     .menu button{
-        min-width: 105px;
+        min-width: 7.686vw;
     }
     .contato img{
-        margin-top: -15px;
+        margin-top: -1.098vw;
         width: 8%;
         height: 8%;
     }
@@ -394,17 +419,17 @@ border: 0%;
         width: 60%;
     }
     .escrito div{
-        font-size: 27px;
+        font-size: 1.976vw;
     }
     .tamanho_foto{
         margin-top: 70%;
     }
     .plano1{
         width: 42%;
-        margin-left: 30px;
+        margin-left: 2.196vw;
     }
     .plano2{
         width: 42%;
-        margin-right: 30px;
+        margin-right: 2.196vw;
     }
 }
