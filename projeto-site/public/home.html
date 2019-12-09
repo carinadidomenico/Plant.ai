@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Página com exemplo de gráfico com Chart.js</title>
-
+    
     <!-- scripts do Chart.js -->
     <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
     <script type="text/javascript" src="https://www.chartjs.org/samples/latest/utils.js"></script>
     <script type="text/javascript" src="./css e js site/funcoes.js"></script>
     <script type="text/javascript" src="./css e js site/grafico.js"></script>
     <link rel="stylesheet" href="./css e js site/dashboard.css">
-
+    
 </head>
 
 <body onload="atualizarGrafico();">
@@ -31,57 +31,65 @@
             </div>
         </div>
     </nav>
+    
+    <main class="conteudo">
         <div>
-        <select onchange="mudandoPlanta()"class="selection" id="comboBox">
-            <option value="0"selected> --Selecione Aqui--</option>
-        </select>
-        <div class="graficos">
-        <div>
-            <div id="div_aguarde">Dados sendo obtidos...</div>
-            <canvas id="canvas_grafico"></canvas>
+            <select onchange="mudandoPlanta()"class="selection custom-select" id="comboBox">
+                <option value="0"selected> --Selecione Aqui--</option>
+            </select>
+            <div class="graficos">
+                <div>
+                    <div id="div_aguarde">Dados sendo obtidos...</div>
+                    <canvas id="canvas_grafico"></canvas>
+                </div>
+            </div>
+            <div class="alerta__container">
+                    <div id="alerta_temp" class="alerta"></div>
+                    <div id="alerta_umi" class="alerta"></div>
+            </div>
         </div>
-        </div>
-        </div>
-        <table>
-            <thead>
+        <div class="conteudo__tabela">
+            <table>
+                <thead>
                     <th id="nomePlanta" colspan="4">Infos</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Temperatura Crítica</td>
-                    <td id="tempMax">   //   </td>
-                    <td>Umidade Crítica</td>
-                    <td id="umiMax">   //   </td>
-                </tr>
-                <tr>
-                    <td>Temperatura alta</td>
-                    <td id="tempTerQua">   //   </td>
-                    <td>umidade alta</td>
-                    <td id="umiTerQua">   //   </td>
-                </tr>
-                <tr>
-                    <td> Temperatura baixa</td>
-                    <td id="tempPriQua">   //   </td>
-                    <td>Umidade baixa</td>
-                    <td id="umiPriQua">   //   </td>
-                </tr>
-                <tr>
-                    <td>Temperatura crítica</td>
-                    <td id="tempMin">   //   </td>
-                    <td>Umidade crítica</td>
-                    <td id="umiMin">   //   </td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div id="alerta_temp"></div><br>
-        <div id="alerta_umi"></div>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Temperatura Crítica</td>
+                        <td id="tempMax">   //   </td>
+                        <td>Umidade Crítica</td>
+                        <td id="umiMax">   //   </td>
+                    </tr>
+                    <tr>
+                        <td>Temperatura alta</td>
+                        <td id="tempTerQua">   //   </td>
+                        <td>umidade alta</td>
+                        <td id="umiTerQua">   //   </td>
+                    </tr>
+                    <tr>
+                        <td> Temperatura baixa</td>
+                        <td id="tempPriQua">   //   </td>
+                        <td>Umidade baixa</td>
+                        <td id="umiPriQua">   //   </td>
+                    </tr>
+                    <tr>
+                        <td>Temperatura crítica</td>
+                        <td id="tempMin">   //   </td>
+                        <td>Umidade crítica</td>
+                        <td id="umiMin">   //   </td>
+                    </tr>
+                </tbody>
+            </table>            
+        </div>
+    </main>
+    
 </body>
 </html>
+<script src="css e js site/helpdesk.js"></script>
 <script>
     verificar_autenticacao();
-
+    
     pegarProdutos();
-
+    
     tipoCliente();
 </script>

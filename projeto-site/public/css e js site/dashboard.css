@@ -18,24 +18,26 @@ main {
 }
 
 .graficos {
-    width: 700px;
-    height: 700px;
+    width: 70vh;
+    height: fit-content;
+    text-align: center;
 }
 
 
 /* NAVBAR */
 
 .navbar {
-    width: 14rem;
+    width: 20rem;
 }
 
 .navbar-container {
     position: fixed;
-    height: 100vh;
-    width: 12rem;
+    margin: 2rem;
+    height: 90vh;
+    width: 13rem;
     background-color: #155434;
     box-shadow: 1px 0px 10px grey;
-    border-radius: 0 2rem 2rem 0
+    border-radius: 2rem;
 }
 
 .navbar-links {
@@ -74,7 +76,6 @@ main {
 
 .selection {
     margin: 3rem auto;
-    margin-left: 30%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -204,24 +205,82 @@ thead {
     font-size: 1.5rem;
 }
 
+/* ALERTAS */
+
+.alerta__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 5rem;
+    margin: 2rem;
+    justify-content: center;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.alerta {
+    color: red;
+    font-size: 24px;
+}
+
+.conteudo {
+    display: flex;
+}
+
+.conteudo__tabela {
+    display: flex;
+}
+
 /* SCROLL */
 
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
     background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: #888; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: #555; 
-  }
+}
+
+
+/* COMBO SELECTION  */
+
+select {
+	color: lightsalmon;
+	width: 20rem;
+    padding: 1rem;
+    border: 1px solid grey;
+    border-radius: 5px;
+	height: 25px;
+	cursor: pointer;
+	background: url(http://sharpik.com/wip/cuteselect/arrow.png) 295px 12px no-repeat white;
+}
+
+select:hover {
+	background-color: transparent;
+	color: white;
+	padding: 15px 5px 15px 25px;
+}
+
+select option {
+	background-color: white;
+	color: gray;
+	padding: 10px 15px;
+	height: 20px;
+	cursor: pointer;
+}
+
+select option:hover {
+	color: lightsalmon;
+}
