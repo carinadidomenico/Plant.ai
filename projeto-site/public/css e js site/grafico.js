@@ -56,12 +56,12 @@ function configurarGrafico() {
             }, {
                 type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
                 display: true,
-                position: 'right',
+                position: 'left',
                 id: 'valor',
 
                 // grid line settings
                 gridLines: {
-                    drawOnChartArea: true, // only want the grid lines for one axis to show up
+                    drawOnChartArea: false, // only want the grid lines for one axis to show up
                 },
             }],
         }
