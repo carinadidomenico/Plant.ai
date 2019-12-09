@@ -16,7 +16,7 @@ router.get('/ultimas', function(req, res, next) {
 	regTemporal,
 	fkProduto,
 	FORMAT(regTemporal,'HH:mm:ss') as momento_grafico 
-	from registro order by idRegistro desc;`;
+	from registro order by idRegistro ;`;
 
 	sequelize.query(instrucaoSql, {
 		model: Leitura,
