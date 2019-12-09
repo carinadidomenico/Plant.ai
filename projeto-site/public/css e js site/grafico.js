@@ -121,7 +121,7 @@ function obterDadosGrafico() {
                         dados.datasets[1].data.push(registro.regUmidade);
                     }
 
-                    if (dados.datasets.length == 7) {
+                    if (dados.datasets[0].length == 7) {
                         break;
                     }
 
@@ -211,16 +211,16 @@ function alertas() {
                         // dos atributos que vem no JSON 
                         // que gerou na consulta ao banco de dados
 
-                        if (registro.regTemperatura >= tempMax.innerHTML) { alerta_temp.innerHTML = `Temperatura Crítica`; }
-                        else if (registro.regTemperatura >= tempTerQua.innerHTML) { alerta_temp.innerHTML = `temperatura Perigosa` }
-                        else if (registro.regTemperatura <= tempPriQua.innerHTML) { alerta_temp.innerHTML = `temperatura Perigosa` }
-                        else if (registro.regTemperatura <= tempMin.innerHTML) { alerta_temp.innerHTML = `Temperatura Crítica` }
+                        if (registro.regTemperatura >= tempMax.innerHTML) { alerta_temp.innerHTML = `Temperatura crítica`; }
+                        else if (registro.regTemperatura >= tempTerQua.innerHTML) { alerta_temp.innerHTML = `Temperatura perigosa` }
+                        else if (registro.regTemperatura <= tempPriQua.innerHTML) { alerta_temp.innerHTML = `Temperatura perigosa` }
+                        else if (registro.regTemperatura <= tempMin.innerHTML) { alerta_temp.innerHTML = `Temperatura crítica` }
                         else { alerta_temp.innerHTML = `` }
 
-                        if (registro.regUmidade >= umiMax.innerHTML) { alerta_umi.innerHTML = `umidade crítica`; }
-                        else if (registro.regUmidade >= umiTerQua.innerHTML) { alerta_umi.innerHTML = `umidade perigosa` }
-                        else if (registro.regUmidade <= umiPriQua.innerHTML) { alerta_umi.innerHTML = `umidade perigosa` }
-                        else if (registro.regUmidade <= umiMin.innerHTML) { alerta_umi.innerHTML = `umidade crítica` }
+                        if (registro.regUmidade >= umiMax.innerHTML) { alerta_umi.innerHTML = `Umidade crítica`; }
+                        else if (registro.regUmidade >= umiTerQua.innerHTML) { alerta_umi.innerHTML = `Umidade perigosa` }
+                        else if (registro.regUmidade <= umiPriQua.innerHTML) { alerta_umi.innerHTML = `Umidade perigosa` }
+                        else if (registro.regUmidade <= umiMin.innerHTML) { alerta_umi.innerHTML = `Umidade crítica` }
                         else { alerta_umi.innerHTML = ``; }
                         break;
                     }
