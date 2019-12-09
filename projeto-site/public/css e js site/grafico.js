@@ -1,3 +1,4 @@
+var cont = 0;
 function pegarProdutos() {
     fetch(`/leituras/ProdutosCli/${email_usuario}`, { cache: 'no-store' }).then(function (response) {
         if (response.ok) {
@@ -31,7 +32,7 @@ var exibiu_grafico = true;
 // ou se souber o que está fazendo!
 function atualizarGrafico() {
     obterDadosGrafico();
-    setTimeout(atualizarGrafico, 5000);
+    setTimeout(atualizarGrafico, 2000);
 }
 
 // altere aqui as configurações do gráfico
@@ -119,9 +120,11 @@ function obterDadosGrafico() {
 
                         dados.datasets[0].data.push(registro.regTemperatura);
                         dados.datasets[1].data.push(registro.regUmidade);
+                        cont++
                     }
 
-                    if (dados.datasets[0].length == 7) {
+                    if (cont == 7) {
+                        cont =0;
                         break;
                     }
 
