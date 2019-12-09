@@ -15,6 +15,7 @@ router.get('/ultimas', function(req, res, next) {
 	regUmidade, 
 	regTemporal,
 	fkProduto,
+	idRegistro,
 	FORMAT(regTemporal,'HH:mm:ss') as momento_grafico 
 	from registro order by idRegistro ;`;
 
