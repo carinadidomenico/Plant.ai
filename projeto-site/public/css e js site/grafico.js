@@ -56,7 +56,7 @@ function configurarGrafico() {
             }, {
                 type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
                 display: true,
-                position: 'left',
+                position: 'right',
                 id: 'valor',
 
                 // grid line settings
