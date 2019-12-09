@@ -61,7 +61,7 @@ function configurarGrafico() {
 
                 // grid line settings
                 gridLines: {
-                    drawOnChartArea: false, // only want the grid lines for one axis to show up
+                    drawOnChartArea: true, // only want the grid lines for one axis to show up
                 },
             }],
         }
